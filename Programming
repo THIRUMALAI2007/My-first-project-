@@ -1,0 +1,40 @@
+# Dictionary storing machine mechanisms
+machines = {
+    "Car": {
+        "Mechanism": "Internal Combustion Engine",
+        "Description": "Fuel burns inside engine to produce motion. Pistons, crankshaft and gearbox convert energy into movement."
+    },
+    "Washing Machine": {
+        "Mechanism": "Electric Motor and Drum Rotation",
+        "Description": "Electric motor rotates the drum to wash clothes using centrifugal force."
+    },
+    "Elevator": {
+        "Mechanism": "Pulley System with Counterweight",
+        "Description": "Uses motor, cables and counterweight to lift or lower the cabin efficiently."
+    },
+    "Bicycle": {
+        "Mechanism": "Chain Drive System",
+        "Description": "Pedaling turns the chain which rotates the wheels using sprockets."
+    },
+    "CNC Machine": {
+        "Mechanism": "Computer Numerical Control",
+        "Description": "Automated machine controlled by computer to cut and shape materials precisely."
+    }
+}
+
+# Function to display machine details
+def show_mechanism(machine_name):
+    if machine_name in machines:
+        print(f"\nMachine: {machine_name}")
+        print(f"Mechanism: {machines[machine_name]['Mechanism']}")
+        print(f"Description: {machines[machine_name]['Description']}")
+    else:
+        print("Machine not found!")
+
+# Main program
+print("Available Machines:")
+for m in machines:
+    print("-", m)
+
+choice = input("\nEnter machine name to view mechanism: ")
+show_mechanism(choice)
